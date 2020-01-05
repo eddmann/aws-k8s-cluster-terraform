@@ -1,6 +1,6 @@
 # Single-node Kubernetes Cluster on AWS
 
-Provisions a single-node (Master) Kubernetes cluster (using [Kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/)) with [Flannel](https://github.com/coreos/flannel) CNI and cluster-wide [Helm](https://helm.sh/) on AWS.
+Provisions a single-node (Master) Kubernetes cluster (using [Kubeadm](https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm/)) with [Flannel](https://github.com/coreos/flannel) CNI and [Helm](https://helm.sh/) client on AWS.
 
 ### Setup
 

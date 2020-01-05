@@ -92,12 +92,7 @@ chown -R ubuntu:ubuntu /home/ubuntu/.kube
 su -c 'kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/023dc119c068d94590b2040d6550ff5ecfa190da/Documentation/kube-flannel.yml' ubuntu
 
 # Install Helm
-wget https://storage.googleapis.com/kubernetes-helm/helm-v${helm_version}-linux-amd64.tar.gz
+wget https://get.helm.sh/helm-v${helm_version}-linux-amd64.tar.gz
 tar xvf helm-v${helm_version}-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/
 rm -rf linux-amd64 helm-*
-
-# Setup Helm
-su -c 'kubectl create serviceaccount tiller --namespace=kube-system' ubuntu
-su -c 'kubectl create clusterrolebinding tiller-admin --serviceaccount=kube-system:tiller --clusterrole=cluster-admin' ubuntu
-su -c 'helm init --service-account=tiller' ubuntu

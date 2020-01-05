@@ -20,7 +20,7 @@ variable "k8s_version" {
 
 variable "helm_version" {
   type        = string
-  description = "Cluster-wide Helm version you would like to run"
+  description = "Helm client version you would like to have access to on the node"
 }
 
 variable "admin_token" {
@@ -49,4 +49,3 @@ variable "node_key" {
   type        = string
   description = "Path to the SSH public key used to access the node"
 }
-
